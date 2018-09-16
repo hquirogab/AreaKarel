@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Ejercicio1;
-
+import becker.robots.*;
 /**
  *
  * @author USUARIO
@@ -14,12 +14,18 @@ public class Vehiculo {
     private Hora  ingreso;
     private Hora salida;
     private int posicion;
+    private Thing thing;
     
-    public Vehiculo(int placa,Hora ingreso, int posicion){
+    public Vehiculo(int placa){
+        this.placa=placa;
+    }
+    public Vehiculo(int placa,Hora ingreso, int posicion, Thing thing){
         this.placa=placa;
         this.ingreso=ingreso;
         this.posicion=posicion;
+        this.thing=thing;
     }
+    
 
     public int getPlaca() {
         return placa;
